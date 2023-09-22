@@ -9,9 +9,9 @@ if __name__ == '__main__':
     import requests
     from sys import argv
 
-    csv_path = "USER_ID.csv"
-    url = "https://jsonplaceholder.typicode.com/"
     param = argv[1]
+    csv_path = "{}.csv".param
+    url = "https://jsonplaceholder.typicode.com/"
     user = requests.get(url + "users?id={}".format(param))
     # Transforms JSON data in Python objects
     user = user.json()
