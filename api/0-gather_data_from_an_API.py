@@ -11,12 +11,19 @@ if __name__ == '__main__':
     url = "https://jsonplaceholder.typicode.com"
     param = argv[1]
     user = requests.get(url + "users?id={}".format(param))
+    # Transforms JSON data in Python objects
+    user.json()
+    name = user[0]['name']
     todos = requests.get(url + "todos?userId={}".format(param))
+    # Transforms JSON data in Python objects
+    todos.json()
     done = requests.get(url + "todos?userId={}&completed=true".format(param))
+    # Transforms JSON data in Python objects
+    done.json()
     done_list = []
 
     print("Employee {} is done with tasks({}/{}):"
-          .format(user, len(done), todos))
+          .format(name, len(done), todos))
 
     # n is a dictionary and title is the key
     for n in todos:
