@@ -13,6 +13,7 @@ if __name__ == '__main__':
     user = requests.get(url + "users?id={}".format(param))
     # Transforms JSON data in Python objects
     user = user.json()
+    # Gets the name from the user object
     name = user[0]["name"]
     todos = requests.get(url + "todos?userId={}".format(param))
     # Transforms JSON data in Python objects
