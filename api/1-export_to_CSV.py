@@ -10,7 +10,7 @@ if __name__ == '__main__':
     from sys import argv
 
     param = argv[1]
-    csv_path = "{}.csv".param
+    csv_path = "{}.csv".format(param)
     url = "https://jsonplaceholder.typicode.com/"
     user = requests.get(url + "users?id={}".format(param))
     # Transforms JSON data in Python objects

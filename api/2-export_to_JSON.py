@@ -5,6 +5,7 @@ To export data in JSON format
 
 if __name__ == '__main__':
 
+    import json
     import requests
     from sys import argv
 
