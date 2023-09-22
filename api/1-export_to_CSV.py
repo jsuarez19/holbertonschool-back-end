@@ -21,7 +21,6 @@ if __name__ == '__main__':
     # Transforms JSON data in Python objects
     todos = todos.json()
 
-       
     with open(csv_path, mode="w", newline="") as file:
         writer = csv.writer(file, delimiter=',', quoting=csv.QUOTE_ALL)
 
