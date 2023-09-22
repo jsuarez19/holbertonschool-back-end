@@ -27,6 +27,6 @@ if __name__ == '__main__':
             "task": todo["title"],
             "completed": todo["completed"],
             "username": name})
-    
+
     with open("{}.json".format(param), 'w') as result_file:
         json.dump(output, result_file)
