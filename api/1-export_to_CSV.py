@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-To export data from in CSV format
+To export data in CSV format
 """
 
 if __name__ == '__main__':
