@@ -16,7 +16,7 @@ if __name__ == '__main__':
     # Transforms JSON data in Python objects
     user = user.json()
     # Gets the name from the user object
-    name = user[0]["name"]
+    name = user[0]["username"]
     todos = requests.get(url + "todos?userId={}".format(param))
     # Transforms JSON data in Python objects
     todos = todos.json()
