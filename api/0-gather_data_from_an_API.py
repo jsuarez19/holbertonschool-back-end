@@ -8,7 +8,7 @@ if __name__ == '__main__':
     import requests
     from sys import argv
 
-    url = "https://jsonplaceholder.typicode.com"
+    url = "https://jsonplaceholder.typicode.com/"
     param = argv[1]
     user = requests.get(url + "users?id={}".format(param))
     # Transforms JSON data in Python objects
