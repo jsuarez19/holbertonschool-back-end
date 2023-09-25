@@ -9,7 +9,7 @@ if __name__ == '__main__':
     import requests
 
     output = {}
-    for i in range(1,11):
+    for i in range(1, 11):
         url = "https://jsonplaceholder.typicode.com/"
         user = requests.get(url + "users?id={}".format(i))
         # Transforms JSON data in Python objects
@@ -21,10 +21,9 @@ if __name__ == '__main__':
         todos = todos.json()
         output[i] = []
         for todo in todos:
-            output[i].append({
-            "username": name,
-            "task": todo["title"],
-            "completed": todo["completed"]})
-    
+            output[i].append({"username": name,
+                              "task": todo["title"],
+                              "completed": todo["completed"]})
+
     with open("todo_all_employees.json", 'w') as result_file:
         json.dump(output, result_file)
